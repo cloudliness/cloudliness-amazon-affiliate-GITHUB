@@ -4,6 +4,8 @@ This project is a static website built with React, designed to showcase and sell
 
 ## Instructions
 
+clone this repository to a folder on your computer. within the folder, open a cmd prompt and enter 'code .' if you use VS Code. in explorer, right click and select 'open in integrated terminal'. type npm install. once modules install, type 'npm start'. from there, the http://localhost:5173 link should show up and then you can work on the template from there.
+
 1.  In `src/components/Contact.jsx`, line 31, enter your own access key from [web3forms.com](https://web3forms.com) website.
 2.  In the `.env` file, add your Stripe secret key and publishable key. You can find these in your Stripe account.
 3.  Product data is manually entered in `src/seed.js`. Add your products and product images there. In `src/seed.js`, line 19, add your Amazon affiliate link for each product.
