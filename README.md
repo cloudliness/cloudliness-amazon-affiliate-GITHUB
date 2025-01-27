@@ -1,65 +1,79 @@
-# Instructions
-in contact.jsx page line 31, enter your own access key from web3forms.com website
+# Cloudliness Amazon Affiliate Site
 
-in .env file, go into your stripe account and look for your stripe keys, you'll need a secret key and a publishable key. add them to the .env file.
+This project is a static website built with React, designed to showcase and sell products through Amazon affiliate links.
 
-because this is a static website, i don't have a backend server. so i enter in my products manually using a seed.js file. in seed.js, this is where you will add your products and pictures for your products. in seed.js line 19, this is where you will add your amazon affiliate link depending on what your selling.
+## Instructions
 
-then just add your own contact info in the contact.jsx page and the footer.
+1.  In `src/components/Contact.jsx`, line 31, enter your own access key from [web3forms.com](https://web3forms.com) website.
+2.  In the `.env` file, add your Stripe secret key and publishable key. You can find these in your Stripe account.
+3.  Product data is manually entered in `src/seed.js`. Add your products and product images there. In `src/seed.js`, line 19, add your Amazon affiliate link for each product.
+4.  Update the contact information in `src/components/Contact.jsx` and `src/components/Footer.jsx`.
 
+## Rules
 
+1.  Read this `README.md` file to understand what's going on.
+2.  When it comes to photos or pictures, unless I'm supplying them, always use photo placeholders from this website: [https://placehold.co/](https://placehold.co/)
 
-# Rules
-
-1. Never remove or delete any content in this page unless told to do so.
-2. Read this readme.md file to understand whats going on.
-3. when it comes to photos or pictures, unless i'm supplying them, always use photo placeholders from this website: https://placehold.co/
-
-# Technology Stack
+## Technology Stack
 
 This project uses the following technologies:
 
-- **Frontend Framework**: React 18 with JSX
-- **Routing**: React Router v6
-- **Build Tool**: Vite 4.2
-- **Backend**: Node.js with Express 4.18
-- **Database**: SQLite 5.1
-- **Payment Integration**: Stripe 12.16
-- **Styling**: CSS Modules
-- **TypeScript**: Available (@types packages)
-- **Development**: Vite dev server
-- **Production**: Vite build system
+-   **Frontend Framework**: React 18 with JSX
+-   **Routing**: React Router v6
+-   **Build Tool**: Vite
+-   **UI Library**: React Bootstrap
+-   **Icons**: React Icons, React Bootstrap Icons, Font Awesome
+-   **Payment Integration**: Stripe
+-   **Environment Variables**: dotenv
 
-# Features Implemented
+## Site Structure
 
-- Home page
-- About page
-- Contact page
-- Product listing
-- Product details
-- Cart functionality
-- Payment processing with Stripe
+The site is structured as a single-page application (SPA) using React components. Here's a brief overview of the main components:
 
-# To Do
+-   `src/App.jsx`: The main application component that sets up routing.
+-   `src/components/`: Contains all the React components for different pages and sections of the site:
+    -   `About.jsx`: About page.
+    -   `Articles.jsx`: Articles page.
+    -   `Cancel.jsx`: Cancel page for Stripe payments.
+    -   `Contact.jsx`: Contact page with a form.
+    -   `FAQ.jsx`: Frequently Asked Questions page.
+    -   `Footer.jsx`: Footer component.
+    -   `HardDrives.jsx`: Hard drives product listing page.
+    -   `HomePage.jsx`: Home page.
+    -   `Navbar.jsx`: Navigation bar component.
+    -   `ProductReviews.jsx`: Product reviews component.
+    -   `Products.jsx`: Products page.
+    -   `Services.jsx`: Services page.
+    -   `Success.jsx`: Success page for Stripe payments.
+-   `src/config/`: Contains configuration files.
+    -   `db.js`: (Unused) Placeholder for database configuration.
+    -   `products.js`: (Unused) Placeholder for product data.
+-   `src/seed.js`: Contains the product data.
+-   `public/`: Contains static assets like images and HTML files.
 
-- Add tests for frontend and backend
-- Improve error handling
-- Add user authentication
-- Add order history
-- Add admin panel
-- Improve UI/UX
-- Add more features
+## Features Implemented
 
-# Potential Improvements
+-   Home page
+-   About page
+-   Contact page
+-   Product listing
+-   Product details
+-   Payment processing with Stripe
 
-- Implement server-side rendering (SSR) for better SEO
-- Optimize performance
-- Add more detailed documentation
-- Implement a more robust database solution
-- Add more payment options
+## To Do
 
-# Recent Troubleshooting
+-   Add tests for frontend
+-   Improve error handling
+-   Add user authentication
+-   Add order history
+-   Add admin panel
+-   Improve UI/UX
+-   Add more features
 
-We have been working on resolving an issue with Stripe checkout. Initially, we encountered an error "Failed to fetch Stripe publishable key from server". This was resolved by adding a check in the `useStripe` hook to ensure the component is mounted before fetching the key, preventing potential race conditions.
+## Potential Improvements
 
-Currently, we are addressing an issue where the checkout process fails with a 500 (Internal Server Error). We are investigating why the POST request to `/api/create-checkout-session` is failing.
+-   Implement server-side rendering (SSR) for better SEO
+-   Optimize performance
+-   Add more detailed documentation
+-   Implement a more robust database solution
+-   Add more payment options
