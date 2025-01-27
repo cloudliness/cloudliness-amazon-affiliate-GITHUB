@@ -1,0 +1,130 @@
+/* Custom styles to enhance Bootstrap navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand,
+.navbar-brand:visited,
+.navbar-brand:active,
+.navbar-brand:focus {
+  font-weight: bold;
+  color: rgb(255, 255, 255) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #007bff !important;
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link.active,
+.nav-link:focus {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: rgb(255, 255, 255) !important;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+.dropdown-toggle::after {
+  border-top-color: white;
+}
+
+.dropdown-menu {
+  background-color: #333;
+}
+
+.dropdown-item {
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #444;
+  color: #007bff !important;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: #333 !important;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+      display: contents !important;
+      flex-basis: auto;
+  }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-toggler .navbar-toggler-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animation for collapsed state */
+[aria-expanded="true"] .navbar-toggler-icon span:first-child {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+[aria-expanded="true"] .navbar-toggler-icon span:last-child {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Mobile styles */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .dropdown-menu {
+    border: none;
+    background-color: transparent;
+    padding-left: 1rem;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+  }
+
+}

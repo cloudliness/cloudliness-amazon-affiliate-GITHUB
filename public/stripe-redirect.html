@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        function handleRedirect() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectPath = urlParams.get('redirect');
+            const sessionId = urlParams.get('session_id');
+
+            if (redirectPath) {
+                // If we have a session ID, append it to the hash route
+                const finalPath = sessionId 
+                    ? `${redirectPath}?session_id=${sessionId}`
+                    : redirectPath;
+                
+                // Redirect to the hash route
+                window.location.replace(finalPath);
+            } else {
+                // Fallback to homepage if no redirect specified
+                window.location.replace('#/');
+            }
+        }
+        // Execute redirect when page loads
+        window.onload = handleRedirect;
+    </script>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+        <p>Redirecting...</p>
+    </div>
+</body>
+</html>

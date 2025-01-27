@@ -1,0 +1,10 @@
+/* Add styles specific to the Cancel component here */
+
+.cancel-container {
+  min-height: calc(100vh - 100px - 80px); /* Viewport height minus header and footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

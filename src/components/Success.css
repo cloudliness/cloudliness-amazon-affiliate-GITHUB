@@ -1,0 +1,84 @@
+/* Success Component Styles */
+.success-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.success-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Toast Styles */
+.toast-container {
+  z-index: 1050;
+}
+
+.toast {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.offcanvas-body {
+  padding: 1.5rem;
+}
+
+/* Button Styles */
+.btn-group-vertical {
+  gap: 1rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .success-container {
+    padding: 1rem;
+  }
+  
+  .offcanvas {
+    width: 100% !important;
+  }
+}
+
+/* Animation for Placeholder */
+@keyframes placeholder-wave {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.placeholder-wave {
+  animation: placeholder-wave 1.5s linear infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 25%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.1) 75%
+  );
+  background-size: 200px 100%;
+}
